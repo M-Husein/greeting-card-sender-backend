@@ -12,7 +12,10 @@
     "nodejs",
     "express",
     "mysql",
-    "restapi"
+    "restapi",
+    "cors",
+    "nodemailer",
+    "dotenv"
   ],
   "dependencies": {
     "cors": "^2.8.5",

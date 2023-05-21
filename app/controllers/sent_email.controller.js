@@ -16,33 +16,9 @@ exports.create = async (req, res) => {
     return;
   }
 
-  // const created_at = nowTimestamp();
-  // const { sender_name, sender_email, recipient_name, recipient_email, message } = req.body;
-
-  // // Create a SentEmail
-  // const sentEmail = new SentEmail({
-  //   sender_name,
-  //   sender_email,
-  //   recipient_name,
-  //   recipient_email,
-  //   message,
-  //   created_at,
-  //   updated_at: created_at,
-  // });
-
-  // // Save SentEmail in the database
-  // SentEmail.create(sentEmail, (err, data) => {
-  //   if (err){
-  //     res.status(500).send({
-  //       message: err.message || "Some error occurred while creating the SentEmail."
-  //     });
-  //   }
-  //   else res.send(data);
-  // });
-
   try {
     const created_at = nowTimestamp();
-    const { sender_name, sender_email, recipient_name, recipient_email, message } = req.body;
+    const { sender_name, sender_email, recipient_name, recipient_email, message, html } = req.body;
 
     // Create a SentEmail
     const sentEmail = new SentEmail({
@@ -77,7 +53,7 @@ exports.create = async (req, res) => {
       to: recipient_email, // "bar@example.com, baz@example.com", // list of receivers
       subject: "Greeting from " + sender_name, // Subject line
       // text: "Hello world?", // plain text body
-      html: message, // "<b>Hello world?</b>", // html body
+      html, // html body
     });
 
     console.log('info: ', info);

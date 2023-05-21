@@ -18,7 +18,6 @@ SendEmail.create = (newData, result) => {
       return;
     }
 
-    // console.log("created sent email: ", { id: res.insertId, ...newData });
     result(null, { id: res.insertId, ...newData });
   });
 };

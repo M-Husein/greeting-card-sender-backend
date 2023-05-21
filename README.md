@@ -4,7 +4,7 @@
 
 Clone or download this repo.
 
-First is Important copy or rename file <mark>.env.example</mark> to <mark>.env</mark> and configuration your database.
+First is Important copy or rename file ***.env.example*** to ***.env*** and configuration your database.
 
 ### Create MySQL table
 

@@ -56,7 +56,7 @@ exports.create = async (req, res) => {
       html, // html body
     });
 
-    console.log('info: ', info);
+    // console.log('info: ', info);
 
     if(!info){
       res.status(500).send({

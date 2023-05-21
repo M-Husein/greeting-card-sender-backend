@@ -1,6 +1,6 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "1234567",
-  DB: "greeting_card_db"
+  HOST: process.env.DB_HOST,
+  USER: process.env.DB_USERNAME,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_DATABASE
 };
